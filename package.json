@@ -1,0 +1,43 @@
+{
+  "name": "npm-package-ts",
+  "version": "0.0.1",
+  "description": "npm-boilerplate",
+  "keywords": [
+    "react",
+    "typescript"
+  ],
+  "homepage": "https://github.com/fedorovsky/npm-package-ts#readme",
+  "bugs": {
+    "url": "https://github.com/fedorovsky/npm-package-ts/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fedorovsky/npm-package-ts.git"
+  },
+  "license": "MIT",
+  "author": "Anton Fedorovskyi",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "storybook": "start-storybook --port 5000"
+  },
+  "dependencies": {
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "styled-components": "^4.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@storybook/react": "^5.2.4",
+    "@types/jest": "^24.0.19",
+    "@types/node": "^12.11.1",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-plugin-styled-components": "^1.10.6",
+    "prettier": "^1.18.2",
+    "typescript": "^3.6.4"
+  }
+}

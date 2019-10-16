@@ -1,0 +1,25 @@
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"],
+  "plugins": [
+    [
+      "styled-components",
+      { "ssr": true, "minify": true, "displayName": false, "pure": true }
+    ],
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-syntax-dynamic-import",
+    [
+      "module-resolver",
+      {
+        "root": ["./src"]
+      }
+    ]
+  ],
+  "ignore": ["node_modules"],
+  "env": {
+    "development": {},
+    "production": {
+      "presets": ["minify"],
+      "ignore": ["node_modules", "**/stories", "**/__tests__", "**/*.test.js"]
+    }
+  }
+}
