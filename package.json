@@ -19,7 +19,8 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
-    "storybook": "start-storybook --port 5000"
+    "storybook": "start-storybook --port 5000",
+    "prettier": "prettier --write \"**/*.{ts,tsx}\""
   },
   "dependencies": {
     "react": "^16.10.2",
