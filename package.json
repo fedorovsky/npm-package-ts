@@ -21,7 +21,7 @@
     "build": "tsc",
     "storybook": "start-storybook --port 5000",
     "prettier": "prettier --write \"**/*.{ts,tsx}\"",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint \"src/**/**.ts*\""
   },
   "dependencies": {
     "react": "^16.10.2",
