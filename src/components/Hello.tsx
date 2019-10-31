@@ -1,6 +1,8 @@
 import * as React from 'react';
 
-interface OwnProps {}
+interface OwnProps {
+  message?: string;
+}
 
 interface State {
   message: string;

@@ -23,6 +23,13 @@ module.exports = ({ config }) => {
     ],
     enforce: 'pre',
   });
+
+  config.module.rules.push({
+    test: /\.(ts|tsx)$/,
+    exclude: [/node_modules/],
+    loaders: ['eslint-loader'],
+  });
+
   config.resolve.extensions.push('.ts', '.tsx');
   return config;
 };
