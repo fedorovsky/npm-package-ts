@@ -18,6 +18,7 @@
   "author": "Anton Fedorovskyi",
   "main": "lib/index.js",
   "scripts": {
+    "test": "jest --coverage --verbose",
     "build": "tsc",
     "storybook": "start-storybook --port 5000",
     "prettier": "prettier --write \"**/*.{ts,tsx}\"",
@@ -42,6 +43,9 @@
     "babel-loader": "^8.0.6",
     "babel-plugin-module-resolver": "^3.2.0",
     "babel-plugin-styled-components": "^1.10.6",
+    "chai": "^4.2.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
     "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.5.0",
     "eslint-import-resolver-typescript": "^2.0.0",
@@ -51,7 +55,17 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
+    "jest": "^24.9.0",
     "prettier": "^1.18.2",
+    "ts-jest": "^24.1.0",
     "typescript": "^3.6.4"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>src/setupTests.ts"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/lib"
+    ]
   }
 }
