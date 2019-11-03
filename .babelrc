@@ -14,12 +14,5 @@
       }
     ]
   ],
-  "ignore": ["node_modules"],
-  "env": {
-    "development": {},
-    "production": {
-      "presets": ["minify"],
-      "ignore": ["node_modules", "**/stories", "**/__tests__", "**/*.test.js"]
-    }
-  }
+  "ignore": ["node_modules"]
 }

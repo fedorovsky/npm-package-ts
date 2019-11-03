@@ -4,10 +4,10 @@
     "outDir": "./lib",
     "module": "commonjs",
     "target": "es5",
+    "declaration": true,
     "removeComments": true,
     "strict": true,
     "sourceMap": true,
-    "allowJs": true,
     "jsx": "react",
     "esModuleInterop": true,
     "types": ["node", "jest"],
@@ -23,7 +23,14 @@
     "emitDecoratorMetadata": true
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "lib", ".storybook", "**/stories"],
+  "exclude": [
+    "node_modules",
+    "lib",
+    ".storybook",
+    "**/*.stories.tsx",
+    "**/*.test.tsx",
+    "src/setupTests.ts"
+  ],
   "awesomeTypescriptLoaderOptions": {
     "useBabel": true,
     "errorsAsWarnings": false,
