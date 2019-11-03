@@ -1,4 +1,5 @@
 const path = require('path');
+const { CheckerPlugin } = require('awesome-typescript-loader');
 
 module.exports = ({ config }) => {
   config.resolve.modules = [
@@ -29,6 +30,8 @@ module.exports = ({ config }) => {
     exclude: [/node_modules/],
     loaders: ['eslint-loader'],
   });
+
+  config.plugins.push(new CheckerPlugin());
 
   config.resolve.extensions.push('.ts', '.tsx');
   return config;

@@ -17,12 +17,16 @@
   "license": "MIT",
   "author": "Anton Fedorovskyi",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "test": "jest --coverage --verbose",
-    "build": "tsc",
+    "tsc": "tsc",
+    "tsc:watch": "tsc -w",
+    "build": "npm-run-all clean tsc",
     "storybook": "start-storybook --port 5000",
     "prettier": "prettier --write \"**/*.{ts,tsx}\"",
-    "lint": "eslint \"src/**/**.ts*\""
+    "lint": "eslint \"src/**/**.ts*\"",
+    "clean": "rimraf ./lib"
   },
   "dependencies": {
     "react": "^16.11.0",
@@ -30,19 +34,15 @@
     "styled-components": "^4.4.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/core": "^7.7.0",
     "@storybook/addon-storysource": "^5.2.5",
     "@storybook/react": "^5.2.5",
     "@types/jest": "^24.0.21",
-    "@types/node": "^12.12.3",
-    "@typescript-eslint/eslint-plugin": "^2.6.0",
-    "@typescript-eslint/parser": "^2.6.0",
+    "@types/node": "^12.12.5",
+    "@typescript-eslint/eslint-plugin": "^2.6.1",
+    "@typescript-eslint/parser": "^2.6.1",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.6",
-    "babel-plugin-module-resolver": "^3.2.0",
-    "babel-plugin-styled-components": "^1.10.6",
     "chai": "^4.2.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
@@ -56,16 +56,10 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
     "jest": "^24.9.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "^1.18.2",
+    "rimraf": "^3.0.0",
     "ts-jest": "^24.1.0",
-    "typescript": "^3.6.4"
-  },
-  "jest": {
-    "setupFilesAfterEnv": [
-      "<rootDir>src/setupTests.ts"
-    ],
-    "testPathIgnorePatterns": [
-      "<rootDir>/lib"
-    ]
+    "typescript": "^3.7.2"
   }
 }
