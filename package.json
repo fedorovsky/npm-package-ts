@@ -39,7 +39,7 @@
     "@storybook/addon-storysource": "^5.2.5",
     "@storybook/react": "^5.2.5",
     "@types/jest": "^24.0.21",
-    "@types/node": "^12.12.3",
+    "@types/node": "^12.12.5",
     "@typescript-eslint/eslint-plugin": "^2.6.0",
     "@typescript-eslint/parser": "^2.6.0",
     "awesome-typescript-loader": "^5.2.1",
