@@ -19,14 +19,14 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
+    "build": "npm-run-all clean tsc",
+    "clean": "rimraf ./lib",
+    "lint": "eslint \"src/**/**.ts*\"",
+    "prettier": "prettier --write \"**/*.{ts,tsx}\"",
+    "storybook": "start-storybook --port 5000",
     "test": "jest --coverage --verbose",
     "tsc": "tsc",
-    "tsc:watch": "tsc -w",
-    "build": "npm-run-all clean tsc",
-    "storybook": "start-storybook --port 5000",
-    "prettier": "prettier --write \"**/*.{ts,tsx}\"",
-    "lint": "eslint \"src/**/**.ts*\"",
-    "clean": "rimraf ./lib"
+    "tsc:watch": "tsc -w"
   },
   "dependencies": {
     "react": "^16.11.0",
@@ -34,7 +34,6 @@
     "styled-components": "^4.4.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.0",
     "@storybook/addon-storysource": "^5.2.5",
     "@storybook/react": "^5.2.5",
     "@types/jest": "^24.0.21",
