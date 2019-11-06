@@ -31,9 +31,5 @@
     "**/*.test.tsx",
     "src/setupTests.ts"
   ],
-  "awesomeTypescriptLoaderOptions": {
-    "useBabel": true,
-    "errorsAsWarnings": false,
-    "babelCore": "@babel/core"
-  }
+  "awesomeTypescriptLoaderOptions": {}
 }
