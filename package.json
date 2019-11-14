@@ -19,14 +19,15 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "build": "npm-run-all clean tsc",
-    "clean": "rimraf ./lib",
-    "lint": "eslint \"src/**/**.ts*\"",
-    "prettier": "prettier --write \"**/*.{ts,tsx}\"",
-    "storybook": "start-storybook --port 5000",
     "test": "jest --coverage --verbose",
     "tsc": "tsc",
-    "tsc:watch": "tsc -w"
+    "tsc:watch": "tsc -w",
+    "build": "npm-run-all clean tsc",
+    "storybook": "start-storybook --port 5000",
+    "prettier": "prettier --write \"**/*.{ts,tsx}\"",
+    "lint": "eslint \"src/**/**.ts*\"",
+    "clean": "rimraf ./lib",
+    "prepublish": "npm run build"
   },
   "dependencies": {
     "react": "^16.11.0",
@@ -34,10 +35,11 @@
     "styled-components": "^4.4.1"
   },
   "devDependencies": {
-    "@storybook/addon-storysource": "^5.2.6",
-    "@storybook/react": "^5.2.6",
-    "@types/jest": "^24.0.22",
-    "@types/node": "^12.12.7",
+    "@babel/core": "^7.7.0",
+    "@storybook/addon-storysource": "^5.2.5",
+    "@storybook/react": "^5.2.5",
+    "@types/jest": "^24.0.21",
+    "@types/node": "^12.12.5",
     "@typescript-eslint/eslint-plugin": "^2.6.1",
     "@typescript-eslint/parser": "^2.6.1",
     "awesome-typescript-loader": "^5.2.1",
@@ -56,7 +58,7 @@
     "eslint-plugin-react": "^7.16.0",
     "jest": "^24.9.0",
     "npm-run-all": "^4.1.5",
-    "prettier": "^1.19.1",
+    "prettier": "^1.18.2",
     "rimraf": "^3.0.0",
     "ts-jest": "^24.1.0",
     "typescript": "^3.7.2"
