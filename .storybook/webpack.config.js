@@ -6,6 +6,7 @@ module.exports = ({ config }) => {
     path.resolve(__dirname, '../src'),
     ...config.resolve.modules,
   ];
+
   config.module.rules.push({
     test: /\.(ts|tsx)$/,
     use: [
@@ -14,6 +15,7 @@ module.exports = ({ config }) => {
       },
     ],
   });
+
   config.module.rules.push({
     test: /\.stories\.tsx?$/,
     loaders: [
