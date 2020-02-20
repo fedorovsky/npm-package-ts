@@ -2,14 +2,14 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "outDir": "./lib",
-    "module": "commonjs",
+    "module": "esnext",
+    "moduleResolution": "node",
     "target": "es5",
     "declaration": true,
     "removeComments": true,
     "strict": true,
     "sourceMap": true,
     "jsx": "react",
-    "esModuleInterop": true,
     "types": ["node", "jest"],
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
@@ -18,18 +18,24 @@
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
-    "allowSyntheticDefaultImports": true,
+    "allowSyntheticDefaultImports": false,
+    "esModuleInterop": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "*.d.ts"],
   "exclude": [
     "node_modules",
     "lib",
     ".storybook",
     "**/*.stories.tsx",
     "**/*.test.tsx",
-    "src/setupTests.ts"
+    "src/setupTests.ts",
+    "src/**/*.stories.tsx"
   ],
-  "awesomeTypescriptLoaderOptions": {}
+  "awesomeTypescriptLoaderOptions": {
+    "useBabel": true,
+    "errorsAsWarnings": false,
+    "babelCore": "@babel/core"
+  }
 }
