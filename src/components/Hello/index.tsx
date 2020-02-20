@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import * as ReactModal from 'react-modal';
 
 interface OwnProps {
   message?: string;
@@ -21,7 +22,12 @@ class Hello extends React.Component<OwnProps, State> {
   };
 
   render() {
-    return <Wrapper onClick={this.handleClick}>{this.state.message}</Wrapper>;
+    return (
+      <Wrapper onClick={this.handleClick}>
+        <ReactModal isOpen={true}>123</ReactModal>
+        {this.state.message}
+      </Wrapper>
+    );
   }
 }
 
