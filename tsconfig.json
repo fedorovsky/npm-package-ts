@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
     "outDir": "./lib",
     "module": "esnext",
     "moduleResolution": "node",
@@ -8,7 +7,7 @@
     "declaration": true,
     "removeComments": true,
     "strict": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "jsx": "react",
     "types": ["node", "jest"],
     "forceConsistentCasingInFileNames": true,
