@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+// TODO
 // import * as ReactModal from 'react-modal';
 
 interface OwnProps {
