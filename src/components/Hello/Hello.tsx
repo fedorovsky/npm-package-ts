@@ -3,6 +3,10 @@ import styled from 'styled-components';
 // TODO
 // import * as ReactModal from 'react-modal';
 
+const Wrapper = styled.div`
+  border: 1px solid red;
+`;
+
 interface OwnProps {
   message?: string;
 }
@@ -32,9 +36,5 @@ class Hello extends React.Component<OwnProps, State> {
     );
   }
 }
-
-const Wrapper = styled.div`
-  border: 1px solid red;
-`;
 
 export default Hello;
