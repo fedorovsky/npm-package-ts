@@ -23,10 +23,11 @@ class Hello extends React.Component<OwnProps, State> {
   };
 
   render() {
+    const { message } = this.state;
     return (
       <Wrapper onClick={this.handleClick}>
         {/* <ReactModal isOpen={true}>123</ReactModal> */}
-        {this.state.message}
+        {message}
       </Wrapper>
     );
   }

@@ -8,3 +8,5 @@ lib/**
 # Ignore tests
 __tests__
 *.test.ts
+*.test.tsx
+setupTests.ts
