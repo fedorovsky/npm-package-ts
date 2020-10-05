@@ -9,11 +9,7 @@
     "prettier/@typescript-eslint",
     "plugin:prettier/recommended"
   ],
-  "plugins": [
-    "react",
-    "@typescript-eslint",
-    "jest"
-  ],
+  "plugins": ["react", "@typescript-eslint", "jest"],
   "env": {
     "browser": true,
     "es6": true,
@@ -36,6 +32,7 @@
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-empty-interface": "off",
     "react/state-in-constructor": "off",
+    "react/prop-types": "off",
     "no-console": "off",
     "import/no-cycle": "off",
     "linebreak-style": "off",
