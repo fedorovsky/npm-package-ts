@@ -2,18 +2,21 @@ const path = require('path');
 
 module.exports = {
   stories: ['../src/**/*.stories.@(ts|tsx)'],
-  addons: [{
-    name: '@storybook/addon-storysource',
-    options: {
-      rule: {
-        test: [/\.stories\.tsx?$/],
-        include: [path.resolve(__dirname, '../src')],
-      },
-      loaderOptions: {
-        prettierConfig: { printWidth: 80, singleQuote: true },
+  addons: [
+    {
+      name: '@storybook/addon-storysource',
+      options: {
+        rule: {
+          test: [/\.stories\.tsx?$/],
+          include: [path.resolve(__dirname, '../src')],
+        },
+        loaderOptions: {
+          prettierConfig: { printWidth: 80, singleQuote: true },
+        },
       },
     },
-  }],
+    '@storybook/addon-actions',
+  ],
   typescript: {
     check: true,
     checkOptions: {},
@@ -26,4 +29,4 @@ module.exports = {
     });
     return config;
   },
-}
+};

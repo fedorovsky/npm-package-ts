@@ -4,6 +4,6 @@ import Hello from '.';
 
 describe('<Hello />', () => {
   it('Render without crashing', () => {
-    shallow(<Hello />);
+    shallow(<Hello message="Hello" />);
   });
 });

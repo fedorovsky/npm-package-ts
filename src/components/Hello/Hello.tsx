@@ -6,28 +6,12 @@ const Wrapper = styled.div`
 `;
 
 interface OwnProps {
-  message?: string;
-}
-
-interface State {
   message: string;
+  onClick?: (e: React.MouseEvent) => void;
 }
 
-class Hello extends React.Component<OwnProps, State> {
-  state = {
-    message: 'Message hello',
-  };
-
-  handleClick = () => {
-    this.setState({
-      message: 'Message was changed',
-    });
-  };
-
-  render() {
-    const { message } = this.state;
-    return <Wrapper onClick={this.handleClick}>{message}</Wrapper>;
-  }
-}
+const Hello: React.FC<OwnProps> = ({ message, onClick }) => {
+  return <Wrapper onClick={onClick}>{message}</Wrapper>;
+};
 
 export default Hello;
