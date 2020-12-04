@@ -1,6 +1,8 @@
 
 node_modules/**
 lib/**
+webpack.config.ts
+webpack.config.js
 
 # Ignore stories
 *.stories.tsx

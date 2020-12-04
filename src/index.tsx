@@ -3,7 +3,7 @@ import Hello from './components/Hello';
 
 const Component = () => (
   <div>
-    <Hello />
+    <Hello message="Hello" />
   </div>
 );
 
