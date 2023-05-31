@@ -1,5 +1,9 @@
 src
-coverage
+stories
 .storybook
 .idea
-jest.config.js
+.editorconfig
+.babelrc.json
+.prettierrc
+.prettierignore
+tsconfig.json
