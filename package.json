@@ -2,16 +2,20 @@
   "name": "npm-package-ts",
   "version": "1.0.2",
   "description": "package",
+  "license": "MIT",
+  "author": "Anton Fedorovskyi",
   "main": "lib/index.js",
   "scripts": {
     "build": "npm-run-all clean tsc",
     "clean": "rimraf ./lib",
     "tsc": "tsc",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "lint": "eslint --fix src/ --ext .js,.jsx,.ts,.tsx"
   },
-  "author": "Anton Fedorovskyi",
-  "license": "MIT",
+  "dependencies": {
+    "styled-components": "^5.3.11"
+  },
   "devDependencies": {
     "@babel/preset-env": "^7.22.4",
     "@babel/preset-react": "^7.22.3",
@@ -22,14 +26,23 @@
     "@storybook/react": "^7.0.18",
     "@storybook/react-webpack5": "^7.0.18",
     "@storybook/testing-library": "^0.0.14-next.2",
+    "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "eslint": "^8.32.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-config-standard-with-typescript": "^32.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.1",
     "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.8",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook": "^7.0.18",
     "typescript": "^5.0.4"
-  },
-  "dependencies": {
-    "styled-components": "^5.3.11"
   }
 }
