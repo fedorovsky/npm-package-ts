@@ -1,32 +1,17 @@
-const path = require('path');
-
-module.exports = {
+/** @type { import('@storybook/react-webpack5').StorybookConfig } */
+const config = {
   stories: ['../src/**/*.stories.@(ts|tsx)'],
   addons: [
-    {
-      name: '@storybook/addon-storysource',
-      options: {
-        rule: {
-          test: [/\.stories\.tsx?$/],
-          include: [path.resolve(__dirname, '../src')],
-        },
-        loaderOptions: {
-          prettierConfig: { printWidth: 80, singleQuote: true },
-        },
-      },
-    },
-    '@storybook/addon-actions',
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "@storybook/addon-interactions",
   ],
-  typescript: {
-    check: true,
-    checkOptions: {},
+  framework: {
+    name: "@storybook/react-webpack5",
+    options: {},
   },
-  webpackFinal: async (config) => {
-    config.module.rules.push({
-      test: /\.(ts|tsx)$/,
-      exclude: [/node_modules/],
-      loaders: ['eslint-loader'],
-    });
-    return config;
+  docs: {
+    autodocs: "tag",
   },
 };
+export default config;
