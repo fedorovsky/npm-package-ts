@@ -1,6 +1,6 @@
 {
   "name": "npm-package-ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "package",
   "main": "lib/index.js",
   "scripts": {
