@@ -6,4 +6,6 @@ stories
 .babelrc.json
 .prettierrc
 .prettierignore
+.eslintrc
+.eslintignore
 tsconfig.json
